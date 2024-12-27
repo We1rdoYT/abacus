@@ -1,7 +1,7 @@
 <div
   class="grid gap-5"
   [style.--rows]="dimensions.digits"
-  [style.--cols]="dimensions.base"
+  [style.--cols]="dimensions.base + 1"
 >
   @for (digit of digits; track $index) {
     <div class="grid-item border-primary bg-base-200 text-primary">
@@ -12,7 +12,7 @@
       <div
         class="h-5 w-5"
         [className]="
-          number <= digit
+          number === digit
             ? 'grid-item border-secondary-content bg-secondary text-secondary-content'
             : 'grid-item border-secondary bg-base-200 text-secondary'
         "

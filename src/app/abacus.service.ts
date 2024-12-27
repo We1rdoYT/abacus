@@ -11,7 +11,9 @@ export class AbacusService {
     digits: 4,
   };
 
-  private dimensions = new BehaviorSubject<Dimensions>(this.DEFAULT_DIMENSIONS);
+  private dimensions = new BehaviorSubject<Dimensions>({
+    ...this.DEFAULT_DIMENSIONS,
+  });
   private value = new BehaviorSubject<number>(0);
 
   public get getDimensions(): BehaviorSubject<Dimensions> {

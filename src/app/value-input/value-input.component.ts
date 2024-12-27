@@ -14,7 +14,7 @@ export class ValueInputComponent {
   value = 0;
 
   constructor(private readonly abacusService: AbacusService) {
-    this.dimensions = abacusService.DEFAULT_DIMENSIONS;
+    this.dimensions = { ...abacusService.DEFAULT_DIMENSIONS };
   }
 
   updateDimensions() {

@@ -16,15 +16,12 @@ export class AbacusComponent {
   digits: number[] = [];
 
   constructor(private readonly abacusService: AbacusService) {
-    this.dimensions = abacusService.DEFAULT_DIMENSIONS;
+    this.dimensions = { ...abacusService.DEFAULT_DIMENSIONS };
 
     abacusService.getDimensions.subscribe((value) => {
       this.dimensions = value;
 
-      this.numbers = Array.from(
-        { length: this.dimensions.base - 1 },
-        (v, k) => k + 1,
-      );
+      this.numbers = Array.from({ length: this.dimensions.base }, (v, k) => k);
 
       this.updateDigits(this.value, value);
     });

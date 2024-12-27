@@ -12,7 +12,7 @@ export class ValueDisplayComponent {
   value = 0;
 
   constructor(private readonly abacusService: AbacusService) {
-    this.base = this.abacusService.DEFAULT_DIMENSIONS.base;
+    this.base = { ...abacusService.DEFAULT_DIMENSIONS }.base;
 
     abacusService.getValue.subscribe((value) => (this.value = value));
     abacusService.getDimensions.subscribe((value) => (this.base = value.base));
