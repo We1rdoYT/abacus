@@ -1,6 +1,6 @@
 {
   "name": "abacus",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -54,5 +54,21 @@
     "tailwindcss": "^3.4.17",
     "typescript": "~5.6.2",
     "typescript-eslint": "8.18.0"
-  }
+  },
+  "description": "A web app that visualizes number systems of different bases.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoolTrainerEX/abacus.git"
+  },
+  "keywords": [
+    "base",
+    "number-systems"
+  ],
+  "author": "Justin Ryan Uy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CoolTrainerEX/abacus/issues"
+  },
+  "homepage": "https://github.com/CoolTrainerEX/abacus#readme"
 }
