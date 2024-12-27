@@ -1,0 +1,76 @@
+<form class="mb-10 flex flex-col gap-5" (submit)="updateDimensions()">
+  <div
+    [className]="!validateBase(dimensions.base) ? 'tooltip tooltip-error' : ''"
+    data-tip="Invalid base"
+  >
+    <label class="input input-bordered flex items-center gap-2" for="base"
+      >Base
+      <input
+        class="grow"
+        type="number"
+        name="base"
+        id="base"
+        placeholder="Type the base here"
+        min="2"
+        max="36"
+        [(ngModel)]="dimensions.base"
+      />
+    </label>
+  </div>
+  <div
+    [className]="
+      !validateDigits(dimensions.digits) ? 'tooltip tooltip-error' : ''
+    "
+    data-tip="Invalid number of digits"
+  >
+    <label class="input input-bordered flex items-center gap-2" for="digits">
+      Digits
+      <input
+        class="grow"
+        type="number"
+        name="digits"
+        id="digits"
+        placeholder="Type the number of digits here"
+        min="1"
+        [(ngModel)]="dimensions.digits"
+      />
+    </label>
+  </div>
+  <input class="btn btn-primary" type="submit" value="Enter" />
+</form>
+
+<form class="flex flex-col gap-5">
+  <div
+    [className]="
+      !validateValue(value, dimensions) ? 'tooltip tooltip-error' : ''
+    "
+    data-tip="Invalid value"
+  >
+    <label class="input input-bordered flex items-center gap-2" for="value"
+      >Value
+      <input
+        class="grow"
+        type="number"
+        name="value"
+        id="value"
+        placeholder="Type the value here"
+        min="0"
+        [(ngModel)]="value"
+        (ngModelChange)="updateValue()"
+    /></label>
+  </div>
+  <div class="flex gap-2">
+    <input
+      type="button"
+      class="btn btn-success flex-1"
+      (click)="addValue()"
+      value="+"
+    />
+    <input
+      class="btn btn-error flex-1"
+      type="button"
+      (click)="subtractValue()"
+      value="&minus;"
+    />
+  </div>
+</form>

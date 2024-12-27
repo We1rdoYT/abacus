@@ -1,0 +1,26 @@
+<div
+  class="grid gap-5"
+  [style.--rows]="dimensions.digits"
+  [style.--cols]="dimensions.base"
+>
+  @for (digit of digits; track $index) {
+    <div
+      class="h-10 w-10 rounded-lg border-2 border-primary bg-base-200 text-center align-middle text-primary"
+    >
+      {{ dimensions.base }}<sup>{{ $index }}</sup>
+    </div>
+
+    @for (number of numbers; track $index) {
+      <div
+        class="h-5 w-5"
+        [className]="
+          number <= digit
+            ? 'h-10 w-10 rounded-lg border-2 border-secondary-content bg-secondary text-center align-middle text-secondary-content'
+            : 'h-10 w-10 rounded-lg border-2 border-secondary bg-base-200 text-center align-middle text-secondary'
+        "
+      >
+        {{ number.toString(dimensions.base) }}
+      </div>
+    }
+  }
+</div>
