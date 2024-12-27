@@ -1,6 +1,8 @@
 <form class="mb-10 flex flex-col gap-5" (submit)="updateDimensions()">
   <div
-    [className]="!validateBase(dimensions.base) ? 'tooltip tooltip-error' : ''"
+    [className]="
+      !validateBase(dimensions.base) ? 'tooltip tooltip-open tooltip-error' : ''
+    "
     data-tip="Invalid base"
   >
     <label class="input input-bordered flex items-center gap-2" for="base"
@@ -19,7 +21,9 @@
   </div>
   <div
     [className]="
-      !validateDigits(dimensions.digits) ? 'tooltip tooltip-error' : ''
+      !validateDigits(dimensions.digits)
+        ? 'tooltip tooltip-open tooltip-error'
+        : ''
     "
     data-tip="Invalid number of digits"
   >
@@ -42,7 +46,9 @@
 <form class="flex flex-col gap-5">
   <div
     [className]="
-      !validateValue(value, dimensions) ? 'tooltip tooltip-error' : ''
+      !validateValue(value, dimensions)
+        ? 'tooltip tooltip-open tooltip-error'
+        : ''
     "
     data-tip="Invalid value"
   >
