@@ -2,5 +2,9 @@
   --rows: 2;
   --cols: 4;
   grid-template-rows: repeat(var(--rows), minmax(0, 1fr));
-  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+}
+
+.grid-item {
+  @apply h-10 w-10 place-content-center rounded-lg border-2 text-center;
 }
