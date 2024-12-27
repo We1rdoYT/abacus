@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1735279589935,
+  "timestamp": 1735280245479,
   "index": "/abacus/index.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "/abacus/favicon.ico",
         "/abacus/index.html",
-        "/abacus/main-3BFL3X2L.js",
+        "/abacus/main-WKFSJLXH.js",
         "/abacus/manifest.webmanifest",
         "/abacus/polyfills-FFHMD2TL.js",
-        "/abacus/styles-EGPLT7NC.css"
+        "/abacus/styles-FHJKSWUV.css"
       ],
       "patterns": []
     },
@@ -51,11 +51,11 @@
     "/abacus/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/abacus/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/abacus/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/abacus/index.html": "56b2a534bf5626e66f33b3561791e608a3b95ef4",
-    "/abacus/main-3BFL3X2L.js": "b7e23d8a197faeb8a51b448303498778849449cf",
+    "/abacus/index.html": "d28f78fd99940eefba45217f3cd0c8f0ed866348",
+    "/abacus/main-WKFSJLXH.js": "6eced54969db7aab4426165aa2c1eca14a1ed949",
     "/abacus/manifest.webmanifest": "6779180c5643609d6d4617656e402d59c3af0301",
     "/abacus/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
-    "/abacus/styles-EGPLT7NC.css": "6347700906581917cf81c2b1f2239725c8fd58e9"
+    "/abacus/styles-FHJKSWUV.css": "965c26790a8764b825cd6fc724dcfd7c82d19be2"
   },
   "navigationUrls": [
     {
