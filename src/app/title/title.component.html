@@ -1,12 +1,18 @@
-<button
+<span
   (click)="hidden = true"
+  (keydown)="hidden = true"
+  tabindex="0"
   class="fixed left-0 top-0 z-10 flex h-screen w-screen flex-col items-center justify-center bg-base-200"
+  [style.height]="hidden ? '0' : ''"
   [class.opacity-0]="hidden"
-  [class.h-0]="hidden"
 >
-  <h1 class="text-9xl font-extrabold text-primary shadow-xl">Abacus</h1>
+  <h1
+    class="bg-primary p-5 text-9xl font-extrabold text-primary-content shadow-xl"
+  >
+    Abacus
+  </h1>
   <p class="text-center text-lg">
     Made by Justin Ryan Uy, Concept by Roger Luis Uy<br />Copyright &copy; 2025
     by Justin Ryan Uy. All rights reserved.
   </p>
-</button>
+</span>
