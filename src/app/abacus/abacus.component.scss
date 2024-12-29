@@ -1,5 +1,6 @@
 .abacus {
-  @apply grid grid-flow-col gap-5;
+  @apply grid grid-flow-col place-content-between gap-5;
+
   direction: rtl;
 
   * {

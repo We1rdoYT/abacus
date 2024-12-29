@@ -1,6 +1,6 @@
 {
   "name": "abacus",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -55,7 +55,7 @@
     "typescript": "~5.6.2",
     "typescript-eslint": "8.18.0"
   },
-  "description": "A web app that visualizes number systems of different bases.",
+  "description": "A web app that visualizes number systems of different bases",
   "main": "eslint.config.js",
   "repository": {
     "type": "git",
