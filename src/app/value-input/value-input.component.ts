@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AbacusService } from '../abacus.service';
 import { Dimensions } from '../dimensions';
@@ -12,8 +12,6 @@ import { Dimensions } from '../dimensions';
 export class ValueInputComponent {
   dimensions: Dimensions;
   value = 0;
-
-  @ViewChild('valueInput') private readonly valueInput!: ElementRef;
 
   constructor(private readonly abacusService: AbacusService) {
     this.dimensions = { ...abacusService.DEFAULT_DIMENSIONS };
@@ -51,8 +49,6 @@ export class ValueInputComponent {
   resetValue() {
     this.value = 0;
     this.updateValue();
-
-    this.valueInput.nativeElement.focus();
   }
 
   validateBase(base: number): boolean {
