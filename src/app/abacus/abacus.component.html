@@ -1,24 +1,34 @@
 <div
-  class="grid gap-5"
-  [style.--rows]="dimensions.digits"
-  [style.--cols]="dimensions.base + 1"
+  class="abacus"
+  [style.height]="
+    ((dimensions.base < 6 ? 2.5 * dimensions.base : 12.5) +
+      0.5 * dimensions.base) *
+      2 +
+    2.5 +
+    'rem'
+  "
 >
   @for (digit of digits; track $index) {
-    <div class="grid-item border-primary bg-base-200 text-primary">
-      {{ dimensions.base }}<sup>{{ $index }}</sup>
-    </div>
-
-    @for (number of numbers; track $index) {
-      <div
-        class="h-5 w-5"
-        [className]="
-          number === digit
-            ? 'grid-item border-secondary-content bg-secondary text-secondary-content'
-            : 'grid-item border-secondary bg-base-200 text-secondary'
-        "
+    <div class="flex flex-col gap-2">
+      <span
+        class="h-10 w-10 place-content-center rounded-lg border-2 border-primary bg-base-200 text-center text-primary"
       >
-        {{ number.toString(dimensions.base) }}
-      </div>
-    }
+        {{ dimensions.base }}<sup>{{ $index }}</sup>
+      </span>
+
+      @for (number of numbers; track $index) {
+        <span
+          class="max-h-10 w-10 rounded-2xl bg-secondary"
+          [style.height]="12.5 / dimensions.base + 'rem'"
+          [style.marginTop]="
+            number === digit
+              ? (dimensions.base < 6 ? 2.5 * dimensions.base : 12.5) +
+                0.5 * dimensions.base +
+                'rem'
+              : ''
+          "
+        ></span>
+      }
+    </div>
   }
 </div>

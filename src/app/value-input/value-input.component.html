@@ -1,14 +1,8 @@
-<form class="mb-10 flex flex-col gap-5" (submit)="updateDimensions()">
-  <div
-    [className]="
-      !validateBase(dimensions.base) ? 'tooltip tooltip-open tooltip-error' : ''
-    "
-    data-tip="Invalid base"
-  >
-    <label class="input input-bordered flex items-center gap-2" for="base"
+<form class="mb-10" (submit)="updateDimensions()">
+  <div [class.error]="!validateBase(dimensions.base)" data-tip="Invalid base">
+    <label for="base"
       >Base
       <input
-        class="grow"
         type="number"
         name="base"
         id="base"
@@ -20,17 +14,12 @@
     </label>
   </div>
   <div
-    [className]="
-      !validateDigits(dimensions.digits)
-        ? 'tooltip tooltip-open tooltip-error'
-        : ''
-    "
+    [class.error]="!validateDigits(dimensions.digits)"
     data-tip="Invalid number of digits"
   >
-    <label class="input input-bordered flex items-center gap-2" for="digits">
+    <label for="digits">
       Digits
       <input
-        class="grow"
         type="number"
         name="digits"
         id="digits"
@@ -43,19 +32,14 @@
   <input class="btn btn-primary" type="submit" value="Enter" />
 </form>
 
-<form class="flex flex-col gap-5">
+<form>
   <div
-    [className]="
-      !validateValue(value, dimensions)
-        ? 'tooltip tooltip-open tooltip-error'
-        : ''
-    "
+    [class.error]="!validateValue(value, dimensions)"
     data-tip="Invalid value"
   >
-    <label class="input input-bordered flex items-center gap-2" for="value"
+    <label for="value"
       >Value
       <input
-        class="grow"
         type="number"
         name="value"
         id="value"
@@ -79,4 +63,10 @@
       value="&minus;"
     />
   </div>
+  <input
+    class="btn btn-primary"
+    type="button"
+    (click)="resetValue()"
+    value="Reset"
+  />
 </form>

@@ -10,7 +10,7 @@ import { Dimensions } from '../dimensions';
   styleUrl: './value-input.component.scss',
 })
 export class ValueInputComponent {
-  dimensions;
+  dimensions: Dimensions;
   value = 0;
 
   constructor(private readonly abacusService: AbacusService) {
@@ -31,8 +31,10 @@ export class ValueInputComponent {
   }
 
   addValue() {
-    if (this.validateValue(this.value + 1, this.dimensions)) this.value++;
-    else this.value = 0;
+    if (this.validateValue(this.value + 1, this.dimensions)) {
+      this.value++;
+      this.abacusService.setCarry = true;
+    } else this.value = 0;
 
     this.updateValue();
   }
@@ -41,6 +43,11 @@ export class ValueInputComponent {
     if (this.validateValue(this.value - 1, this.dimensions)) this.value--;
     else this.value = 0;
 
+    this.updateValue();
+  }
+
+  resetValue() {
+    this.value = 0;
     this.updateValue();
   }
 
