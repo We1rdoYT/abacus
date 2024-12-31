@@ -1,7 +1,7 @@
 {
-  "name": "abacus",
-  "short_name": "abacus",
-  "theme_color": "#1976d2",
+  "name": "Abacus",
+  "short_name": "Abacus",
+  "theme_color": "#81d653",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
