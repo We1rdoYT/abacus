@@ -11,14 +11,14 @@
   @for (digit of digits; track $index) {
     <div class="flex flex-col gap-2">
       <span
-        class="h-10 w-10 place-content-center rounded-lg border-2 border-primary bg-base-200 text-center text-primary"
+        class="h-10 w-10 place-content-center rounded-lg border-2 border-secondary bg-base-200 text-center font-semibold text-secondary"
       >
         {{ dimensions.base }}<sup>{{ $index }}</sup>
       </span>
 
       @for (number of numbers; track $index) {
         <span
-          class="max-h-10 w-10 rounded-2xl bg-secondary"
+          class="max-h-10 w-10 rounded-2xl bg-primary"
           [style.height]="12.5 / dimensions.base + 'rem'"
           [style.marginTop]="
             number === digit
